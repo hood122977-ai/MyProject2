@@ -106,6 +106,7 @@ h1 {
   border-radius: 10px;
   font-weight: 700;
   letter-spacing: 0.01em;
+  cursor: pointer;
 }
 
 .primary:disabled {
@@ -175,6 +176,70 @@ h1 {
   color: #475569;
   margin-top: 0.5rem;
   font-size: 0.95rem;
+}
+
+/* 추가 스타일 */
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.record-button {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #0f172a;
+}
+
+.record-button:hover {
+  border-color: #2563eb;
+  background: #eef2ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.record-button:active {
+  transform: translateY(0);
+}
+
+.record-button.selected {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-color: transparent;
 }
 
 @media (max-width: 640px) {
